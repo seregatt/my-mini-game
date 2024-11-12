@@ -22,6 +22,7 @@ def get_message():
     return '!', 200
 
 
+
 @server.route('/')
 def webhook():
     bot.remove_webhook()
