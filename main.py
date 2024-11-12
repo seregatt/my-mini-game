@@ -23,7 +23,7 @@ def get_message():
     json_string = request.get_data().decode('utf-8')
     update = telebot.types.Update.de_json(json_string)
     bot.process_new_updates([update])
-    return '!', 200
+    return render_template('index.html'), 200
 
 
 @server.route('/')
