@@ -1,21 +1,17 @@
 import os
 import telebot
-from flask import Flask, request
+from flask import Flask, render_template, request
 
 TOKEN = '7580167697:AAGQhpoMI4Oq-WpulwP5uPMOz_edLlpWJ8Q'
 APP_URL = f'https://my-app-game-ef1ec4b42519.herokuapp.com/{TOKEN}'
 bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 
+app = Flask(__name__, template_folder='.')
 
-@bot.message_handler(commands=['start'])
-def start(message):
-    bot.reply_to(message, 'Hello, ' + message.from_user.first_name)
-
-
-@bot.message_handler(func=lambda message: True, content_types=['text'])
-def echo(message):
-    bot.reply_to(message, message.text)
+@app.route("/")
+def web():
+    return render_template('index.html')
 
 
 @server.route('/' + TOKEN, methods=['POST'])
