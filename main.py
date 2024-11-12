@@ -7,11 +7,13 @@ APP_URL = f'https://my-app-game-ef1ec4b42519.herokuapp.com/{TOKEN}'
 bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 
-app = Flask(__name__, template_folder='.')
+app = Flask(__name__)
 
-@app.route("/")
-def web():
-    return render_template('index.html')
+@app.route('/')
+def home():
+   return render_template('index.html')
+if __name__ == '__main__':
+   app.run()
 
 
 @server.route('/' + TOKEN, methods=['POST'])
