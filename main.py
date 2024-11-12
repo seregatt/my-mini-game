@@ -8,6 +8,12 @@ bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 
 
+@app.route('/')
+def home():
+   return render_template('index.html')
+if __name__ == '__main__':
+   server.run()
+
 @bot.message_handler(commands=['start'])
 def start(message):
     bot.reply_to(message, 'Hello, ' + message.from_user.first_name)
@@ -23,14 +29,14 @@ def get_message():
     json_string = request.get_data().decode('utf-8')
     update = telebot.types.Update.de_json(json_string)
     bot.process_new_updates([update])
-    return render_template('index.html'), 200
+    return '!', 200
 
 
 @server.route('/')
 def webhook():
     bot.remove_webhook()
     bot.set_webhook(url=APP_URL)
-    return render_template('index.html'), 200
+    return '!', 200
 
 
 if __name__ == '__main__':
