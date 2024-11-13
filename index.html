@@ -250,11 +250,13 @@ window.addEventListener("orientationchange", function() {
 		$(this).parent('.closing-div').toggleClass('hide');
 		$('.overflow').removeClass('show');
 		$('body').removeClass('hide');
+		BackButton.hide();
 	});
 	$(".overflow").click(function() {
 		$('.overflow').removeClass('show');
 		$('body').removeClass('hide');
 		$('.bottom-hidden-block.level-block').removeClass('hide');
+		BackButton.hide();
 	});
 	$(".open-level").click(function() {
 		$('body').toggleClass('hide');
