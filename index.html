@@ -270,7 +270,13 @@ window.addEventListener("orientationchange", function() {
 		$('.overflow').toggleClass('show');
 		$('.bottom-hidden-block.level-block').toggleClass('hide');
 	});
-
+$('body').on('touchend', function(e) {
+    var $this = $(this);
+    if ($this.data('lastTouch') && e.timeStamp – $this.data('lastTouch') < 500) {
+        e.preventDefault(); /* предотвращаем двойной тап */
+    }
+    $this.data('lastTouch', e.timeStamp);
+});
 
 
 
