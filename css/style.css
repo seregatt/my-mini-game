@@ -109,7 +109,7 @@ body {
 .page.full-page {
 	display: flex;
 	flex-wrap: wrap;
-	min-height: calc(100vh - 161px);
+	min-height: calc(100vmax - 161px);
 	align-content: space-between;
 }
 .page.full-page > div {
