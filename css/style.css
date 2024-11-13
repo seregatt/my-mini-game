@@ -98,6 +98,8 @@ body {
 }
 .bottom-fixed-menu .menu.active .icon-color {
 	fill:#FEB24A;
+}body {
+    touch-action: none !important;
 }
 .page {
 	padding: 16px 20px 20px 20px;
