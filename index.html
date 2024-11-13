@@ -156,7 +156,11 @@
 	
 
 let main_page = document.querySelector('#main_page');
+$(window).resize(function() {
+    $('.page.full-page').height($(window).height() - 161);
+});
 
+$(window).trigger('resize');
 
 if  (main_page){
     window.Telegram.WebApp.expand() //expand window after page loading
