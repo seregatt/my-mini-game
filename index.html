@@ -259,6 +259,12 @@ window.addEventListener("orientationchange", function() {
 		$('body').toggleClass('hide');
 		$('.overflow').toggleClass('show');
 		$('.bottom-hidden-block.level-block').toggleClass('hide');
+		
+var BackButton = window.Telegram.WebApp.BackButton;
+BackButton.show();
+BackButton.onClick(function() {
+    BackButton.hide();
+});
 	});
 
 
