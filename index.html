@@ -3,103 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-    <title>Game</title>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: var(--tg-theme-text-color);
+            background: var(--tg-theme-bg-color);
+        }
+
+        .Main {
+            width: 100%;
+            padding: 25px;
+            text-align: center;
+
+        }
+
+        h1 {
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 70px;
+            margin: 30px auto;
+        }
+
+        .btn {
+            border: 0;
+            border-radius: 5px;
+            margin-top: 50px;
+            height: 60px;
+            width: 200px;
+            font-style: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            color: var(--tg-theme-button-text-color);
+            background: var(--tg-theme-button-color);
+        }
+        
+    </style>
 </head>
 <body>
-    <div class="wrapper" id="main_page">
- 
- 
-	</div>
+    <div class="Main">
+        <h1>Тестовое приложение</h1>
+        <img src="{{ url_for('static', filename='bot.png') }}" alt="123">
+        <p></p>
+        <button class="btn">Кнопка</button>
+    </div>
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-	 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-<script>
-	let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
-	
-
-let main_page = document.querySelector('#main_page');
- 
-
-$(window).trigger('resize');
-
-if  (main_page){
-    window.Telegram.WebApp.expand() //expand window after page loading
-}
-
-	$(".close").click(function() {
-		$(this).parent('.closing-div').toggleClass('hide');
-		$('.overflow').removeClass('show');
-		$('body').removeClass('hide');
-	});
-	$(".overflow").click(function() {
-		$('.overflow').removeClass('show');
-		$('body').removeClass('hide');
-		$('.bottom-hidden-block.level-block').removeClass('hide');
-	});
-	$(".open-level").click(function() {
-		$('body').toggleClass('hide');
-		$('.overflow').toggleClass('show');
-		$('.bottom-hidden-block.level-block').toggleClass('hide');
-	});
-
-
-
-
-
-
-$(function () {
-	jQuery.fn.extend({
-    	countdown: function () {
-            let hour = 3, min = 0, sec = 0
-            render(hour, min, sec)
-            
-            const timer = setInterval(() => {
-            	if (hour == 0 && min == 0 && sec == 0) {
-                	clearInterval(timer)
-                    return ;
-                }
-                
-            	sec = dealSec(sec)
-                min = dealMin(min, sec)
-                hour = dealhour(hour, min, sec)
-                render(hour, min, sec)
-            }, 1000)
-        },
-    })
-    
-    $('#countdown').countdown()
-})
-
-function dealSec (sec) {
-    const timeRange = [...Array(60).keys()].reverse()
-	const idxNow = timeRange.indexOf(sec)
-    const idxNext = (idxNow + 1) % timeRange.length
-    return timeRange[idxNext]
-}
-
-function dealMin(min, sec) {
-    const timeRange = [...Array(60).keys()].reverse()
-    if (sec === 59) {
-    	const idxNow = timeRange.indexOf(min)
-        const idxNext = (idxNow + 1) % timeRange.length
-        return timeRange[idxNext]
-    }
-    return min
-}
-
-function dealhour (hour, min, sec) {
-	if (min === 59 && sec === 59) return hour - 1
-    return hour
-}
-
-function render(hour, min, sec) {
-	hour = ("00" + hour).slice(-2)
-    min  = ("00" + min).slice(-2)
-    sec  = ("00" + sec).slice(-2)
-    
-    $('#countdown').text(`${hour} : ${min} : ${sec}`)
-}
-</script>
 </body>
 </html>
