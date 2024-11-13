@@ -209,6 +209,10 @@ window.addEventListener("scroll", logViewport, false)
 $(window).resize(function() {
 logViewport()
 });
+window.addEventListener("orientationchange", function() {
+  // Announce the new orientation number
+  logViewport()
+}, false);
 
 
 
