@@ -64,6 +64,7 @@ body {
 }
 .bottom-fixed-menu {
 	position:fixed;
+	display:none;
 	bottom:0;
 	margin:0 auto;
 	max-width:1000px;
@@ -71,7 +72,7 @@ body {
 	background:#fff;
 	padding:8px 20px 15px 20px;
 	box-sizing: border-box;
-	display:flex;
+	display:none;
 	justify-content: space-between;
 	color:#9393BA;
 	font-size:14px;
