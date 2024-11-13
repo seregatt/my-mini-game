@@ -166,7 +166,12 @@ if  (main_page){
     window.Telegram.WebApp.expand() //expand window after page loading
 	window.Telegram.WebApp.disableVerticalSwipes()
 }
-
+document.addEventListener("touchmove", function (event) {
+    event.preventDefault();
+},
+    {
+        passive: false
+    });
 	$(".close").click(function() {
 		$(this).parent('.closing-div').toggleClass('hide');
 		$('.overflow').removeClass('show');
