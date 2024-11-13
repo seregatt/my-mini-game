@@ -10,6 +10,7 @@ body {
 	max-width:1000px;
 	margin:0 auto;
 	position:relative;
+	overflow:hidden;
 }
 .main-head {
 	display:flex;
@@ -97,34 +98,6 @@ body {
 }
 .bottom-fixed-menu .menu.active .icon-color {
 	fill:#FEB24A;
-}
-.close {
-	position:absolute;
-	right:10px;
-	top:10px;
-	background:#fff;
-	border-radius:24px;
-	width:24px;
-	height:24px;
-	background: #fff no-repeat url("../image/close-icon.svg") center center;
-	z-index:1;
-}
-.closing-div {
-	opacity: 1;
-	animation: 3s infinite alternate slide-in;
-	overflow:hidden;
-}
-.closing-div.hide {
-	animation: slideUp 1s ease 0s 1 normal forwards;
-}
-@keyframes slideUp {
-	0% {
-		transform: translateY(0);
-	}
-
-	100% {
-		transform: translateY(-100vh);
-	}
 }
 .page {
 	padding:16px 20px 80px 20px;
@@ -238,13 +211,178 @@ body {
 	margin:0 6px 0 0;
 	background: no-repeat url("../image/mining-icon.svg") center center;
 }
+.page .bottom-block .claim-btn  {
+	background:#FEB24A;
+	font-weight:500;
+	font-size:16px;
+	color:#170947;
+	border-radius:30px;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+	padding:6px 6px 6px 18px;
+	margin:8px 0 0 0;
+}
+.page .bottom-block .claim-btn .count {
+	background:#F08C02;
+	border-radius:30px;
+	padding:8px 12px;
+}
+.page .bottom-block .claim-btn .count:before {
+	content:'';
+	width:15px;
+	height:15px;
+	display:inline-block;
+	background: no-repeat url("../image/claim-icon.svg") center center;
+	margin:0 5px -2px 0;
+}
+.page .bottom-block .countdown {
+	display:flex;
+}
+.page .bottom-block .countdown:before {
+	content:'';
+	width:20px;
+	height:20px;
+	display:inline-block;
+	background: no-repeat url("../image/time-icon.svg") center center;
+	margin:0 6px 0 0;
+}
+.page .bottom-block .countdown #countdown {
+	margin:0 0 0 6px;
+}
+.overflow {
+	background:rgba(0,0,0, 0.2);
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:2;
+	height:0;
+	overflow:hidden;
+  transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+  /* Прячем элемент */
+  opacity: 0;
+  visibility: hidden;
+}
+.overflow.show {
+	height:auto;
+  opacity: 1;
+  visibility: visible;
+}
+body.hide {
+	overflow:hidden;
+}
+.bottom-hidden-block {
+	position:fixed;
+	z-index:3;
+	width:100%;
+	left:50%;
+	right:0;
+	bottom:0;
+	max-width:1000px;
+	transform: translate(-50%, 0);
+	background:#fff;
+	overflow-y: hidden;
+	max-height: 50vh;
+	max-height: 0;
+	box-sizing: border-box;
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: ease;
+}
+.bottom-hidden-block.hide {
+	max-height: 50vh;
+}
+.bottom-hidden-block .close {
+	background-color:#F2F3F8!important;
+}
+.bottom-hidden-block .container {
+	padding:20px;
+}
+.bottom-hidden-block .block-name {
+	font-size:20px;
+	color:#170947;
+	font-weight:500;
+	margin:0 0 4px;
+}
+.bottom-hidden-block p {
+	color:#9393BA;
+	font-size:14px;
+	font-weight:500;
+}
+.bottom-hidden-block .level-list-block {
+	color:#9393BA;
+	font-size:14px;
+	font-weight:500;
+	background:#F2F3F8;
+	border-radius:16px;
+	padding:0 2px;
+	overflow:auto;
+	max-height:27vh;
+}
+.bottom-hidden-block .level-list-block .list {
+	display:flex;
+	justify-content: space-between;
+	padding:11px 12px;
+	position:relative;
+}
+.bottom-hidden-block .level-list-block .list.you {
+	background:#fff;
+	border-radius:16px;
+}
+.bottom-hidden-block .level-list-block .list .you {
+	color:#9393BA;
+	font-size:10px;
+	position:absolute;
+	right:50px;
+	top:15px;
+}
+.bottom-hidden-block .level-list-block .level {
+	color:#170947;
+	font-size:16px;
+}
+.close {
+	position:absolute;
+	right:10px;
+	top:10px;
+	background:#fff;
+	border-radius:24px;
+	width:24px;
+	height:24px;
+	background: #fff no-repeat url("../image/close-icon.svg") center center;
+	z-index:1;
+}
+.closing-div {
+	animation: 3s infinite alternate slide-in;
+	overflow:hidden;
+}
+.closing-div.slide-up.hide {
+	animation: slideUp 1s ease 0s 1 normal forwards;
+	height:auto;
+	overflow:auto;
+}
+.closing-div.slide-down.hide {
+ 
+}
+@keyframes slideUp {
+	0% {
+		transform: translateY(0);
+	}
 
+	100% {
+		transform: translateY(-100vh);
+	}
+}
+@keyframes slideDown {
+	0% {
+		transform: translateY(0);
+	}
 
-
-
-
-
-
+	100% {
+		transform: translateY(100vh);
+	}
+}
 
 
 
