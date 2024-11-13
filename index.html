@@ -260,15 +260,13 @@ window.addEventListener("orientationchange", function() {
 		$('body').toggleClass('hide');
 		$('.overflow').toggleClass('show');
 		$('.bottom-hidden-block.level-block').toggleClass('hide');
-		
-		
 		BackButton.show();
-		BackButton.onClick(function() {
-			BackButton.hide();
+	});
+	BackButton.onClick(function() {
+		BackButton.hide();
 		$('body').toggleClass('hide');
 		$('.overflow').toggleClass('show');
 		$('.bottom-hidden-block.level-block').toggleClass('hide');
-		});
 	});
 
 
