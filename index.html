@@ -153,7 +153,7 @@
 	 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script>
 	let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
-	window.Telegram.WebApp.disableVerticalSwipes()
+	
 
 let main_page = document.querySelector('#main_page');
 $(window).resize(function() {
@@ -164,6 +164,7 @@ $(window).trigger('resize');
 
 if  (main_page){
     window.Telegram.WebApp.expand() //expand window after page loading
+	window.Telegram.WebApp.disableVerticalSwipes()
 }
 
 	$(".close").click(function() {
