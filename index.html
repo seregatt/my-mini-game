@@ -166,7 +166,61 @@ if  (main_page){
     window.Telegram.WebApp.expand() //expand window after page loading
 	window.Telegram.WebApp.disableVerticalSwipes()
 }
-      function ensureDocumentIsScrollable() {
+
+
+
+
+
+
+
+var isOutOfViewport = function (elem) {
+  // Get element's bounding
+  var bounding = elem.getBoundingClientRect()
+
+  // Check if it's out of the viewport on each side
+  var out = {}
+  out.top = bounding.top < 0
+  out.left = bounding.left < 0
+  out.bottom =
+    bounding.bottom >
+    (window.innerHeight-50 || document.documentElement.clientHeight)
+  out.right =
+    bounding.right > (window.innerWidth || document.documentElement.clientWidth)
+  out.any = out.top || out.left || out.bottom || out.right
+
+  return out
+}
+
+var elem = document.querySelector(".page")
+
+var logViewport = function () {
+  var isOut = isOutOfViewport(elem)
+  if (isOut.any) {
+    console.log("Not in the viewport! =(")
+	$('body').addClass('scroll');
+  } else {
+    console.log("In the viewport! =)")
+	$('body').removeClass('scroll');
+  }
+}
+
+logViewport()
+window.addEventListener("scroll", logViewport, false)
+$(window).resize(function() {
+logViewport()
+});
+
+
+
+
+
+
+
+
+
+
+
+      /*function ensureDocumentIsScrollable() {
         const isScrollable =
           document.documentElement.scrollHeight > window.innerHeight;
         if (!isScrollable) {
@@ -186,7 +240,7 @@ if  (main_page){
       const scrollableElement = document.querySelector(".scrollable-element");
       scrollableElement.addEventListener("touchstart", preventCollapse);
 
-      window.addEventListener("load", ensureDocumentIsScrollable);
+      window.addEventListener("load", ensureDocumentIsScrollable);*/
 	$(".close").click(function() {
 		$(this).parent('.closing-div').toggleClass('hide');
 		$('.overflow').removeClass('show');

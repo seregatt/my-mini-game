@@ -98,7 +98,7 @@ body {
 }
 .bottom-fixed-menu .menu.active .icon-color {
 	fill:#FEB24A;
-}body {
+}body.scroll {
     touch-action: none !important;
 }
 .page {
