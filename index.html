@@ -165,6 +165,7 @@ $(window).trigger('resize');
 if  (main_page){
     window.Telegram.WebApp.expand() //expand window after page loading
 	window.Telegram.WebApp.disableVerticalSwipes()
+	var BackButton = window.Telegram.WebApp.BackButton;
 }
 
 
@@ -260,11 +261,14 @@ window.addEventListener("orientationchange", function() {
 		$('.overflow').toggleClass('show');
 		$('.bottom-hidden-block.level-block').toggleClass('hide');
 		
-var BackButton = window.Telegram.WebApp.BackButton;
-BackButton.show();
-BackButton.onClick(function() {
-    BackButton.hide();
-});
+		
+		BackButton.show();
+		BackButton.onClick(function() {
+			BackButton.hide();
+		$('body').toggleClass('hide');
+		$('.overflow').toggleClass('show');
+		$('.bottom-hidden-block.level-block').toggleClass('hide');
+		});
 	});
 
 
