@@ -99,18 +99,6 @@ body {
 .bottom-fixed-menu .menu.active .icon-color {
 	fill:#FEB24A;
 }
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  body, html::-webkit-scrollbar {
- 
-  }
-
-  /* Hide scrollbar for IE, Edge and Firefox */
-  body,html {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-  }
 .page {
 	padding: 16px 20px 20px 20px;
 	margin: 0 0 62px;
