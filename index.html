@@ -7,7 +7,7 @@
     <title>Game</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="main_page">
         <div class="main-head">
 			<div class="user">
 				<div class="photo">
@@ -153,6 +153,14 @@
 	 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script>
 	let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
+	
+
+let main_page = document.querySelector('#main_page');
+
+
+if  (main_page){
+    window.Telegram.WebApp.expand() //expand window after page loading
+}
 
 	$(".close").click(function() {
 		$(this).parent('.closing-div').toggleClass('hide');
