@@ -197,10 +197,10 @@ var logViewport = function () {
   var isOut = isOutOfViewport(elem)
   if (isOut.any) {
     console.log("Not in the viewport! =(")
-	$('body').addClass('scroll');
+	$('body').removeClass('scroll');
   } else {
     console.log("In the viewport! =)")
-	$('body').removeClass('scroll');
+	$('body').addClass('scroll');
   }
 }
 
