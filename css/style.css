@@ -126,7 +126,7 @@ body {
 	}
 }
 .page {
-	padding:16px 20px;
+	padding:16px 20px 80px 20px;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 	background: #f2f3f8 repeat url("../image/background.png") center center;
@@ -134,7 +134,7 @@ body {
 .page.full-page {
 	display: flex;
 	flex-wrap: wrap;
-	height: calc(100vh - 170px);
+	min-height: calc(100vh - 159px);
 	align-content: space-between;
 }
 .page.full-page > div {
