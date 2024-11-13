@@ -5,7 +5,6 @@ body {
 	padding:0;
 	margin:0;
 	background:#fff;
-	overflow:hidden;
 }
 .wrapper {
 	max-width:1000px;
@@ -101,7 +100,8 @@ body {
 	fill:#FEB24A;
 }
 .page {
-	padding:16px 20px 80px 20px;
+	padding: 16px 20px 20px 20px;
+	margin: 0 0 62px;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 	background: #f2f3f8 repeat url("../image/background.png") center center;
@@ -109,7 +109,7 @@ body {
 .page.full-page {
 	display: flex;
 	flex-wrap: wrap;
-	min-height: calc(100vh - 159px);
+	min-height: calc(100vh - 161px);
 	align-content: space-between;
 }
 .page.full-page > div {
