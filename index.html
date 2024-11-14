@@ -250,7 +250,7 @@ window.addEventListener("orientationchange", function() {
 
 
 
-      /*function ensureDocumentIsScrollable() {
+      function ensureDocumentIsScrollable() {
         const isScrollable =
           document.documentElement.scrollHeight > window.innerHeight;
         if (!isScrollable) {
@@ -270,7 +270,7 @@ window.addEventListener("orientationchange", function() {
       const scrollableElement = document.querySelector(".scrollable-element");
       scrollableElement.addEventListener("touchstart", preventCollapse);
 
-      window.addEventListener("load", ensureDocumentIsScrollable);*/
+      window.addEventListener("load", ensureDocumentIsScrollable);
 	$(".close").click(function() {
 		$(this).parent('.closing-div').toggleClass('hide');
 		$('.overflow').removeClass('show');
