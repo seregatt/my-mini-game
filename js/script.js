@@ -2,11 +2,9 @@
 	
 
 let main_page = document.querySelector('#main_page');
-$(window).resize(function() {
-    $('.page.full-page').css({minHeight:$(window).height() - 125})
-});
 
-$(window).trigger('resize');
+
+ 
 
 if  (main_page){
     window.Telegram.WebApp.expand() //expand window after page loading
@@ -56,8 +54,16 @@ var initHeight = function () {
     });
 }
 
-logViewport()
+var mainHeight = function () {
+    var $header = $('.main-tab-content.active .main-head');
+    $.each($('.active .page'), function (index, node) {
+        var $hero = $(node);
+        $hero.css('min-height', 'calc(100vh - ' + $header.height() + 'px - 90px)');
+    });
+}
 
+logViewport()
+mainHeight()
 window.addEventListener("scroll", logViewport, false)
 
 $(window).resize(function() {
