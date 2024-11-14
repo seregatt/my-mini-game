@@ -74,7 +74,7 @@
 		
 		
 		<div class="bottom-fixed-menu">
-			<div class="menu home main-tab-link active" data-tab="1">
+			<div class="menu home main-tab-link" data-tab="1">
 				<div class="icon">
 					<svg width="13" height="16" viewBox="0 0 13 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						<path class="icon-color" d="M7.99671 1.44676C7.17803 0.601244 5.822 0.601243 5.00332 1.44676L1.00459 5.57653C0.774935 5.81371 0.620614 6.11356 0.561067 6.43828C0.0754341 9.08659 0.0395868 11.7978 0.455031 14.458L0.602117 15.3999C0.648575 15.6973 0.904794 15.9167 1.20588 15.9167H4.00002C4.23013 15.9167 4.41668 15.7301 4.41668 15.5V9.66666H8.58335V15.5C8.58335 15.7301 8.7699 15.9167 9.00002 15.9167H11.7941C12.0952 15.9167 12.3514 15.6974 12.3979 15.3999L12.545 14.458C12.9604 11.7978 12.9246 9.08659 12.4389 6.43828C12.3794 6.11356 12.2251 5.81371 11.9954 5.57654L7.99671 1.44676Z"></path>
@@ -82,7 +82,7 @@
 				</div>
 				Home
 			</div>
-			<div class="menu earn main-tab-link" data-tab="2">
+			<div class="menu earn main-tab-link active" data-tab="2">
 				<div class="icon">
 					<svg width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
 						<path class="icon-color" d="M16.5085 6.47608L16.5106 9.49513C16.4894 9.78275 16.462 10.07 16.4284 10.3568C16.3724 10.8363 15.9826 11.2231 15.4931 11.2778C13.9599 11.4491 12.3734 11.4491 10.8403 11.2778C10.3508 11.2231 9.96099 10.8363 9.90491 10.3568C9.72177 8.79094 9.72177 7.20908 9.90491 5.64324C9.96099 5.16374 10.3508 4.77695 10.8403 4.72224C12.3734 4.55089 13.9599 4.55089 15.4931 4.72224C15.9826 4.77695 16.3724 5.16374 16.4284 5.64324C16.4609 5.92041 16.4875 6.19808 16.5085 6.47608ZM13.1667 6.75001C12.4763 6.75001 11.9167 7.30965 11.9167 8.00001C11.9167 8.69036 12.4763 9.25001 13.1667 9.25001C13.857 9.25001 14.4167 8.69036 14.4167 8.00001C14.4167 7.30965 13.857 6.75001 13.1667 6.75001Z"></path>
@@ -218,7 +218,7 @@ var isOutOfViewport = function (elem) {
 }
 
  
-var elem = document.querySelector(".bottom-fixed-menu")
+var elem = document.querySelector(".main-tab-content.active")
 
 var logViewport = function () {
   var isOut = isOutOfViewport(elem)
@@ -245,18 +245,9 @@ window.addEventListener("orientationchange", function() {
 
 
 
-         $(function () {
-             var $win = $(window);
 
-             $win.scroll(function () {
-                 if ($win.scrollTop() == 0)
-                     alert('Scrolled to Page Top');
-                 else if ($win.height() + $win.scrollTop()
-                                == $(document).height()) {
-                     $('body').addClass('scroll');
-                 }
-             });
-         });
+
+
 
 
 
