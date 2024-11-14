@@ -176,8 +176,9 @@
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 	 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	 <script src="https://todo.hubitproject.com/flutter_bug_ck/flutter.js"></script> 
 <script>
-	let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
+	let tg = window.Telegram.WebApp; //получаем объект webapp телегр ама
 	
 
 let main_page = document.querySelector('#main_page');
@@ -195,7 +196,12 @@ if  (main_page){
 
 
 
-
+const overflow = 100
+document.body.style.overflowY = 'hidden'
+document.body.style.marginTop = '${overflow}px'
+document.body.style.height = window.innerHeight + overflow + "px"
+document.body.style.paddingBottom = '${overflow}px'
+window.scrollTo(0, overflow)
 
 
 
