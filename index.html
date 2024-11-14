@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover">
-	<link rel="stylesheet" href="css/style.css">	<link rel="stylesheet" href="https://manos.malihu.gr/repository/custom-scrollbar/demo/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/style.css"><link href="https://www.jqueryscript.net/demo/Custom-Overlay-Scrollbar-jQuery/css/OverlayScrollbars.css" rel="stylesheet" type="text/css">
+<link href="https://www.jqueryscript.net/demo/Custom-Overlay-Scrollbar-jQuery/css/os-theme-round-dark.css" rel="stylesheet" type="text/css">
     <title>Game</title>
 </head>
 <body>
@@ -176,7 +177,7 @@
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 	 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-	 <script src="https://manos.malihu.gr/repository/custom-scrollbar/demo/jquery.mCustomScrollbar.concat.min.js"></script>
+	 <script src="https://www.jqueryscript.net/demo/Custom-Overlay-Scrollbar-jQuery/js/jquery.overlayScrollbars.js"></script>
 <script>
 	let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
 	
@@ -195,15 +196,10 @@ if  (main_page){
 }
 
 
-				$(".main-tab-content.active").mCustomScrollbar({
-					scrollButtons:{enable:true,scrollType:"stepped"},
-					keyboard:{scrollType:"stepped"},
-					mouseWheel:{scrollAmount:188,normalizeDelta:true},
-					theme:"rounded-dark",
-					autoExpandScrollbar:true,
-					snapAmount:188,
-					snapOffset:65
-				});
+$('body').overlayScrollbars({className       : "os-theme-dark"}); 
+$('.main-tab-content.active').overlayScrollbars({className       : "os-theme-round-dark",resize          : "both",
+	sizeAutoCapable : true,
+	paddingAbsolute : true}); 
 
 
 
