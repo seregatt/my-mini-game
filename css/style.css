@@ -393,7 +393,7 @@ body.hide {
 }
 .main-tab-content.active {
 	display: block;
-	max-height:100vh
+	max-height:calc(100vh - 62px);
 }
 .tab-page  {
 	background:#fff;
