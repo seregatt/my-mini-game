@@ -247,7 +247,9 @@ window.addEventListener("orientationchange", function() {
    window.Telegram.WebApp.ready(); window.Telegram.WebApp.expand();
  });
 
-
+$(window).scroll(function (event) {
+   window.Telegram.WebApp.ready(); window.Telegram.WebApp.expand();
+});
 
 
 
