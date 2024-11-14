@@ -243,7 +243,9 @@ window.addEventListener("orientationchange", function() {
 
 
 
-
+ $('body').on('touchstart', function () {
+   window.Telegram.WebApp.ready(); window.Telegram.WebApp.expand();
+ });
 
 
 
