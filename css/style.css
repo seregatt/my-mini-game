@@ -443,6 +443,15 @@ body.hide {
 }
 .tab-page .items-list .item:last-child{
 	margin:0 20px 0 7px;
+}html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+#root {
+  /* Preserve scrolling behavior */
+  overflow-y: auto;
 }
 .tab-page .items-list .item .image {
 	width:40px;
