@@ -392,7 +392,8 @@ body.hide {
 	display: none;
 }
 .main-tab-content.active {
-	display: block
+	display: block;
+	max-height:100vh
 }
 .tab-page  {
 	background:#fff;
