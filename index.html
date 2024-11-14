@@ -47,20 +47,23 @@
 		<div class="main-tab-content active" id="tab-2">
 			<div class="tab-page">
 				<div class="title">Earn <span>· 35</span></div>
-				<div class="scroll-wrap scrollable-element">
-					<div class="cards">
-						<div class="image"><img src="content/pixel.gif" /></div>
-					</div>
-					<div class="cards">
-						<div class="image"><img src="content/pixel.gif" /></div>
-					</div>
-					<div class="cards">
-						<div class="image"><img src="content/pixel.gif" /></div>
-					</div>
-					<div class="cards">
-						<div class="image"><img src="content/pixel.gif" /></div>
-					</div>
-				</div>
+<main class="main">
+	<div class="items">
+		<!-- <div class="items no-scrollbar"> -->
+		<a class="item item1" rel="noopeener" target="_blank" href="https://example.com"></a>
+		<div class="item item2"></div>
+		<div class="item item3"></div>
+		<div class="item item4"></div>
+		<div class="item item5"></div>
+		<div class="item item6"></div>
+		<div class="item item7"></div>
+		<div class="item item8"></div>
+		<div class="item item9"></div>
+		<div class="item item10"></div>
+	</div>
+</main>
+
+
 			</div>
 			<div class="page">
 				My cards
@@ -218,8 +221,6 @@ var isOutOfViewport = function (elem) {
 }
 
  
-$(window).resize(function() {
- });
 window.addEventListener("orientationchange", function() {
   // Announce the new orientation number
  }, false);
@@ -234,7 +235,7 @@ window.addEventListener("orientationchange", function() {
 
 
 
-      function ensureDocumentIsScrollable() {
+      /*function ensureDocumentIsScrollable() {
         const isScrollable =
           document.documentElement.scrollHeight > window.innerHeight;
         if (!isScrollable) {
@@ -254,7 +255,7 @@ window.addEventListener("orientationchange", function() {
       const scrollableElement = document.querySelector(".scrollable-element");
       scrollableElement.addEventListener("touchstart", preventCollapse);
 
-      window.addEventListener("load", ensureDocumentIsScrollable);
+      window.addEventListener("load", ensureDocumentIsScrollable);*/
 	$(".close").click(function() {
 		$(this).parent('.closing-div').toggleClass('hide');
 		$('.overflow').removeClass('show');
@@ -290,33 +291,67 @@ $('.main-tab-link').click( function() {
 });
 
 
-const slider = document.querySelector('.scroll-wrap');
+
+
+
+
+
+
+
+
+
+
+
+const slider = document.querySelector(".items");
 let isDown = false;
 let startX;
 let scrollLeft;
 
-slider.addEventListener('mousedown', (e) => {
+slider.addEventListener("mousedown", e => {
   isDown = true;
-  slider.classList.add('active');
+  slider.classList.add("active");
   startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
 });
-slider.addEventListener('mouseleave', () => {
+
+slider.addEventListener("mouseleave", () => {
   isDown = false;
-  slider.classList.remove('active');
+  slider.classList.remove("active");
 });
-slider.addEventListener('mouseup', () => {
+
+slider.addEventListener("mouseup", () => {
   isDown = false;
-  slider.classList.remove('active');
+  slider.classList.remove("active");
 });
-slider.addEventListener('mousemove', (e) => {
-  if(!isDown) return;
+
+slider.addEventListener("mousemove", e => {
+  if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 3; //scroll-fast
+  const walk = (x - startX) * 3;
   slider.scrollLeft = scrollLeft - walk;
-  console.log(walk);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
