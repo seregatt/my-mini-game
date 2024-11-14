@@ -4,7 +4,7 @@ body {
 	font-family: "Inter", sans-serif;
 	padding:0;
 	margin:0;
-	background:#fff;transform: translate(0%, 50px);
+	background:#fff;
 }
 .wrapper {
 	max-width:1000px;
@@ -443,8 +443,6 @@ body.hide {
 }
 .tab-page .items-list .item:last-child{
 	margin:0 20px 0 7px;
-}:root {
-     --safe-area-inset-bottom: calc(100vh - var(--tg-viewport-stable-height, 100vh))
 }
 .tab-page .items-list .item .image {
 	width:40px;
