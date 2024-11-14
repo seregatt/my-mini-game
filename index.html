@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover">
 	<link rel="stylesheet" href="css/style.css">
-	<link href="https://www.jqueryscript.net/demo/Custom-Overlay-Scrollbar-jQuery/css/OverlayScrollbars.css" rel="stylesheet" type="text/css">
+	<link href="css/OverlayScrollbars.css" rel="stylesheet" type="text/css">
     <title>Game</title>
 </head>
 <body>
     <div class="wrapper" id="main_page">
-		<div class="main-tab-content" id="tab-1">
+		<div class="main-tab-content active" id="tab-1">
 			<div class="main-head">
 				<div class="user">
 					<div class="photo">
@@ -38,36 +38,314 @@
 						100 nuts farming per hour
 						<div class="boost open-level">BOOST</div>
 					</div>
-					<div class="mining-btn">Start mining</div>
-					<div class="claim-btn">Claim tokens<div class="count">124</div></div>
-					<div class="claim-btn"><div class="countdown">Left <div id="countdown"></div></div><div class="count">4658</div></div>
+					<div class="master-btn-big mining-btn">Start mining</div>
+					<div class="master-btn-big claim-btn">Claim tokens<div class="count">124</div></div>
+					<div class="master-btn-big claim-btn"><div class="countdown">Left <div id="countdown"></div></div><div class="count">4658</div></div>
 				</div>
 			</div>
 		</div>
 		
-		<div class="main-tab-content active" id="tab-2">
+		<div class="main-tab-content" id="tab-2">
 			<div class="tab-page">
 				<div class="title">Earn <span>· 35</span></div>
 				<div class="slide-item">
 					<div class="items-list">
 						<div class="item">
-							<div class="image">
-								<img src="content.pixel.gif" alt="" />
+							<div class="container">
+								<div class="image">
+									<img src="content/pixel.gif" alt="" />
+								</div>
+								<div class="info-block">
+									<div class="info">
+										<div class="name">Join Popcorn Today</div>
+										<div class="coin">+555</div>
+									</div>
+									<div class="master-btn add-btn"></div>
+								</div>
 							</div>
 						</div>
-						<div class="item item3"></div>
-						<div class="item item4"></div>
+						<div class="item">
+							<div class="container">
+								<div class="image">
+									<img src="content/bot.png" alt="" />
+								</div>
+								<div class="info-block">
+									<div class="info">
+										<div class="name">Fucking Scroll</div>
+										<div class="coin">+1 000 001</div>
+									</div>
+									<div class="master-btn add-btn"></div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="container">
+								<div class="image">
+									<img src="content/pixel.gif" alt="" />
+								</div>
+								<div class="info-block">
+									<div class="info">
+										<div class="name">Sample Name</div>
+										<div class="coin">+36</div>
+									</div>
+									<div class="master-btn add-btn"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div style="height:900px;background:red;"></div>
-
-
+				<div class="small-tab-menu">
+					<div class="small_tab_1_link small-tab-menu-link active" data-tab="1">Games</div>
+					<div class="small_tab_1_link small-tab-menu-link" data-tab="2">Minigames</div>
+					<div class="small_tab_1_link small-tab-menu-link" data-tab="3">Mine cards</div>
+				</div>
 			</div>
 			<div class="page">
-				My cards
+				<div class="small_tab_1_content small-tab-content active" id="tab-1">
+					<div class="mini-tab-menu">
+						<div class="mini_tab_1_link mini-tab-menu-link active" data-tab="1">My cards</div>
+						<div class="mini_tab_1_link mini-tab-menu-link" data-tab="2">New cards</div>
+						<div class="mini_tab_1_link mini-tab-menu-link" data-tab="3">Missed cards</div>
+					</div>
+					<div class="mini_tab_1_content mini-tab-content active" id="tab-1">
+						<div class="block-name">In progress <span>· 3</span></div>
+						<div class="master-block">
+							<div class="block icon icon-telegram">
+								<div class="text">
+									<div class="tit">JOIN CRYPTON NEWS</div>
+									<div class="coin">+555</div>
+								</div>
+								<div class="master-btn reload-btn"></div>
+							</div>
+							<div class="block icon icon-ton">
+								<div class="text">
+									<div class="tit">JOIN CRYPTON NEWS</div>
+									<div class="coin">+555</div>
+								</div>
+								<div class="master-btn accept-btn"></div>
+							</div>
+							<div class="block icon icon-telegram">
+								<div class="text">
+									<div class="tit">JOIN CRYPTON NEWS</div>
+									<div class="coin">+555</div>
+								</div>
+								<div class="master-btn text-btn">Check</div>
+							</div>
+						</div>
+						
+						<div class="block-name">Available <span>· 5</span></div>
+						<div class="master-block">
+							<div class="block icon icon-telegram">
+								<div class="text">
+									<div class="tit">JOIN CRYPTON NEWS</div>
+									<div class="coin">+555</div>
+								</div>
+								<div class="master-btn text-btn">Proceed</div>
+							</div>
+							<div class="block icon icon-ton">
+								<div class="text">
+									<div class="tit">JOIN CRYPTON NEWS</div>
+									<div class="coin">+555</div>
+								</div>
+								<div class="master-btn accept-btn"></div>
+							</div>
+							<div class="block icon icon-telegram">
+								<div class="text">
+									<div class="tit">JOIN CRYPTON NEWS</div>
+									<div class="coin">+555</div>
+								</div>
+								<div class="master-btn text-btn">Stoped</div>
+							</div>
+							<div class="block icon icon-ton">
+								<div class="text">
+									<div class="tit">JOIN CRYPTON NEWS</div>
+									<div class="coin">+555</div>
+								</div>
+								<div class="master-btn accept-btn"></div>
+							</div>
+							<div class="block icon icon-ton">
+								<div class="text">
+									<div class="tit">JOIN CRYPTON NEWS</div>
+									<div class="coin">+555</div>
+								</div>
+								<div class="master-btn accept-btn"></div>
+							</div>
+						</div>
+						
+						<div class="block-name">Confirmed <span>· 3</span></div>
+						<div class="master-block">
+							<div class="block icon icon-telegram">
+								<div class="text">
+									<div class="tit">JOIN CRYPTON NEWS</div>
+									<div class="coin">+555</div>
+								</div>
+								<div class="master-btn text-btn">Proceed</div>
+							</div>
+							<div class="block icon icon-ton">
+								<div class="text">
+									<div class="tit">JOIN CRYPTON NEWS</div>
+									<div class="coin">+555</div>
+								</div>
+								<div class="master-btn accept-btn"></div>
+							</div>
+							<div class="block icon icon-telegram">
+								<div class="text">
+									<div class="tit">JOIN CRYPTON NEWS</div>
+									<div class="coin">+555</div>
+								</div>
+								<div class="master-btn text-btn">Check</div>
+							</div>
+						</div>
+					</div>
+					<div class="mini_tab_1_content mini-tab-content" id="tab-2">
+						sample2
+					</div>
+					<div class="mini_tab_1_content mini-tab-content" id="tab-3">
+						sample3
+					</div>
+				</div>
+				<div class="small_tab_1_content small-tab-content" id="tab-2">
+					dasd asd as das da<br /> das dasd as das <br />dasd asd as das da<br /> das dasd as das <br />
+				</div>
+				<div class="small_tab_1_content small-tab-content" id="tab-3">
+					dasd asd as das da<br /> das dasd as das <br />dasd asd as das da<br /> das dasd as das <br />dasd asd as das da<br /> das dasd as das <br />
+				</div>
 			</div>
 		</div>
 		
+		<div class="main-tab-content" id="tab-4">
+			<div class="tab-page">
+				<div class="title">Profile</div>
+				<div class="small-tab-menu">
+					<div class="small_tab_2_link small-tab-menu-link active" data-tab="1">Games</div>
+					<div class="small_tab_2_link small-tab-menu-link" data-tab="2">Minigames</div>
+					<div class="small_tab_2_link small-tab-menu-link" data-tab="3">Mine cards</div>
+				</div>
+			</div>
+			<div class="small_tab_2_content small-tab-content active" id="tab-1">
+				<div class="page">
+					<div class="small_tab_1_content small-tab-content active" id="tab-1">
+						<div class="mini-tab-menu">
+							<div class="mini_tab_2_link mini-tab-menu-link active" data-tab="1">Friends</div>
+							<div class="mini_tab_2_link mini-tab-menu-link" data-tab="2">Leaders</div>
+						</div>
+						<div class="mini_tab_2_content mini-tab-content active" id="tab-1">
+							<div class="master-block no-space">
+								<div class="block icon icon-telegram">
+									<div class="text">
+										<div class="tit">INVITE A FRIEND</div>
+										<div class="coin no-icon">500 nuts to you and friend</div>
+									</div>
+								</div>
+								<div class="block icon icon-premium">
+									<div class="text">
+										<div class="tit">Invite a friend with Telegram Premium </div>
+										<div class="coin no-icon">1000 nuts to you and friend</div>
+									</div>
+								</div>
+							</div>
+							<div class="block-buttons">
+								<div class="master-btn-big text-btn">Invite friend</div>
+								<div class="buttons-align">
+									<div class="master-btn-big copy-icon"></div>
+									<div class="master-btn-big share-icon open-share"></div>
+								</div>
+							</div>
+							
+							<div class="block-name">Your statistics <span class="link open-works">How it works?</span></div>
+							<div class="master-block statics no-space">
+								<div class="block">
+									<div class="text">
+										<div class="tit">Referal tickets</div>
+										<div class="val icon-ticket">15</div>
+									</div>
+								</div>
+								<div class="block">
+									<div class="text">
+										<div class="tit">Referral tokens</div>
+										<div class="val icon-coin">256</div>
+									</div>
+								</div>
+							</div>
+							<div class="master-block statics no-space">
+								<div class="block">
+									<div class="text">
+										<div class="tit">Your friends</div>
+										<div class="val">32</div>
+									</div>
+								</div>
+								<div class="block">
+									<div class="text">
+										<div class="tit">Their friends</div>
+										<div class="val">99</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mini_tab_2_content mini-tab-content" id="tab-2">
+							<div class="block-name">Leaders</div>
+							<div class="master-block statics no-space">
+								<div class="block">
+									<div class="text">
+										<div class="tit">Referal tickets</div>
+										<div class="val">15</div>
+									</div>
+								</div>
+								<div class="block">
+									<div class="text">
+										<div class="tit">Referral tokens</div>
+										<div class="val">256</div>
+									</div>
+								</div>
+								<div class="block">
+									<div class="text">
+										<div class="tit">Referral tokens</div>
+										<div class="val">256</div>
+									</div>
+								</div>
+								<div class="block">
+									<div class="text">
+										<div class="tit">Referral tokens</div>
+										<div class="val">256</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="block-name">Leaders</div>
+							<div class="master-block no-space">
+								<div class="block icon icon-telegram">
+									<div class="text">
+										<div class="tit">INVITE A FRIEND</div>
+										<div class="coin no-icon">500 nuts to you and friend</div>
+									</div>
+								</div>
+								<div class="block icon icon-premium">
+									<div class="text">
+										<div class="tit">Invite a friend with Telegram Premium </div>
+										<div class="coin no-icon">1000 nuts to you and friend</div>
+									</div>
+								</div>
+								<div class="block icon icon-telegram">
+									<div class="text">
+										<div class="tit">INVITE A FRIEND</div>
+										<div class="coin no-icon">500 nuts to you and friend</div>
+									</div>
+								</div>
+								<div class="block icon icon-premium">
+									<div class="text">
+										<div class="tit">Invite a friend with Telegram Premium </div>
+										<div class="coin no-icon">1000 nuts to you and friend</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="small_tab_2_content small-tab-content" id="tab-2">
+				dasdas 2
+			</div>
+		</div>
 		
 		
 		
@@ -75,7 +353,7 @@
 		
 		
 		<div class="bottom-fixed-menu">
-			<div class="menu home main-tab-link" data-tab="1">
+			<div class="menu home main-tab-link active" data-tab="1">
 				<div class="icon">
 					<svg width="13" height="16" viewBox="0 0 13 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						<path class="icon-color" d="M7.99671 1.44676C7.17803 0.601244 5.822 0.601243 5.00332 1.44676L1.00459 5.57653C0.774935 5.81371 0.620614 6.11356 0.561067 6.43828C0.0754341 9.08659 0.0395868 11.7978 0.455031 14.458L0.602117 15.3999C0.648575 15.6973 0.904794 15.9167 1.20588 15.9167H4.00002C4.23013 15.9167 4.41668 15.7301 4.41668 15.5V9.66666H8.58335V15.5C8.58335 15.7301 8.7699 15.9167 9.00002 15.9167H11.7941C12.0952 15.9167 12.3514 15.6974 12.3979 15.3999L12.545 14.458C12.9604 11.7978 12.9246 9.08659 12.4389 6.43828C12.3794 6.11356 12.2251 5.81371 11.9954 5.57654L7.99671 1.44676Z"></path>
@@ -83,7 +361,7 @@
 				</div>
 				Home
 			</div>
-			<div class="menu earn main-tab-link active" data-tab="2">
+			<div class="menu earn main-tab-link" data-tab="2">
 				<div class="icon">
 					<svg width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
 						<path class="icon-color" d="M16.5085 6.47608L16.5106 9.49513C16.4894 9.78275 16.462 10.07 16.4284 10.3568C16.3724 10.8363 15.9826 11.2231 15.4931 11.2778C13.9599 11.4491 12.3734 11.4491 10.8403 11.2778C10.3508 11.2231 9.96099 10.8363 9.90491 10.3568C9.72177 8.79094 9.72177 7.20908 9.90491 5.64324C9.96099 5.16374 10.3508 4.77695 10.8403 4.72224C12.3734 4.55089 13.9599 4.55089 15.4931 4.72224C15.9826 4.77695 16.3724 5.16374 16.4284 5.64324C16.4609 5.92041 16.4875 6.19808 16.5085 6.47608ZM13.1667 6.75001C12.4763 6.75001 11.9167 7.30965 11.9167 8.00001C11.9167 8.69036 12.4763 9.25001 13.1667 9.25001C13.857 9.25001 14.4167 8.69036 14.4167 8.00001C14.4167 7.30965 13.857 6.75001 13.1667 6.75001Z"></path>
@@ -118,318 +396,130 @@
 				Rating
 			</div>
 		</div>
-   
-
-		<div class="bottom-hidden-block level-block closing-div slide-down">
-			<div class="close"></div>
-			<div class="container">
-				
-				<div class="block-name">Levels</div>
-				<p>Upgrade your level to collect<br /> tokens less frequently</p>
-				<div class="level-list-block scrollable-element">
-					<div class="list">
-						<div class="item">10 nuts per hour · 2 hours</div>
-						<div class="level">1 lvl</div>
-					</div>
-					<div class="list">
-						<div class="item">20 nuts per hour · 2 hours </div>
-						<div class="level">2 lvl</div>
-					</div>
-					<div class="list">
-						<div class="item">30 nuts per hour · 2 hours </div>
-						<div class="level">3 lvl</div>
-					</div>
-					<div class="list">
-						<div class="item">40 nuts per hour · 2 hours </div>
-						<div class="level">4 lvl</div>
-					</div>
-					<div class="list you">
-						<div class="item">50 nuts per hour · 2 hours </div>
-						<div class="you">YOU →</div>
-						<div class="level">5 lvl</div>
-					</div>
-					<div class="list">
-						<div class="item">60 nuts per hour · 2 hours </div>
-						<div class="level">6 lvl</div>
-					</div>
-					<div class="list">
-						<div class="item">70 nuts per hour · 2 hours </div>
-						<div class="level">7 lvl</div>
-					</div>
-					<div class="list">
-						<div class="item">80 nuts per hour · 2 hours </div>
-						<div class="level">8 lvl</div>
-					</div>
-					<div class="list">
-						<div class="item">90 nuts per hour · 2 hours </div>
-						<div class="level">9 lvl</div>
-					</div>
-					<div class="list">
-						<div class="item">100 nuts per hour · 2 hours </div>
-						<div class="level">10 lvl</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-		<div class="overflow"></div>
 	</div>
 
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-	 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-	 <script src="https://www.jqueryscript.net/demo/Custom-Overlay-Scrollbar-jQuery/js/jquery.overlayScrollbars.js"></script>
-<script>
-	let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
+
+
+	<div class="bottom-hidden-block level-block closing-div slide-down">
+		<div class="close"></div>
+		<div class="container">
+			<div class="block-name">Levels</div>
+			<p>Upgrade your level to collect<br /> tokens less frequently</p>
+			<div class="level-list-block scrollable-element">
+				<div class="list">
+					<div class="item">10 nuts per hour · 2 hours</div>
+					<div class="level">1 lvl</div>
+				</div>
+				<div class="list">
+					<div class="item">20 nuts per hour · 2 hours </div>
+					<div class="level">2 lvl</div>
+				</div>
+				<div class="list">
+					<div class="item">30 nuts per hour · 2 hours </div>
+					<div class="level">3 lvl</div>
+				</div>
+				<div class="list">
+					<div class="item">40 nuts per hour · 2 hours </div>
+					<div class="level">4 lvl</div>
+				</div>
+				<div class="list you">
+					<div class="item">50 nuts per hour · 2 hours </div>
+					<div class="you">YOU →</div>
+					<div class="level">5 lvl</div>
+				</div>
+				<div class="list">
+					<div class="item">60 nuts per hour · 2 hours </div>
+					<div class="level">6 lvl</div>
+				</div>
+				<div class="list">
+					<div class="item">70 nuts per hour · 2 hours </div>
+					<div class="level">7 lvl</div>
+				</div>
+				<div class="list">
+					<div class="item">80 nuts per hour · 2 hours </div>
+					<div class="level">8 lvl</div>
+				</div>
+				<div class="list">
+					<div class="item">90 nuts per hour · 2 hours </div>
+					<div class="level">9 lvl</div>
+				</div>
+				<div class="list">
+					<div class="item">100 nuts per hour · 2 hours </div>
+					<div class="level">10 lvl</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
 	
+	<div class="bottom-hidden-block share-block closing-div slide-down">
+		<div class="close"></div>
+		<div class="container">
+			<div class="block-name">Share in socials</div>
+			<div class="share-icon-block">
+				<div class="icon messenger"></div>
+				<div class="icon facebook"></div>
+				<div class="icon instagram"></div>
+				<div class="icon whatsapp"></div>
+				<div class="icon twitter"></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="bottom-hidden-block works-block closing-div slide-down">
+		<div class="close"></div>
+		<div class="container">
+			<div class="block-name">How it works</div>
+			<div class="works-block-flex">
+				<div class="block telegram">
+					<div>10%</div>
+					Points from each friend you invite
+				</div>
+				<div class="block premium">
+					<div>25%</div>
+					Points from a friend with premium
+				</div>
+			</div>
+			<div class="works-info scrollable-element">
+				<div class="block">
+					<div>Donate bonus</div>
+					For every donation purchase made by your referral, you will get 10% of their purchase
+				</div>
+				<div class="block">
+					<div>Donate bonus</div>
+					For every donation purchase made by your referral, you will get 10% of their purchase
+				</div>
+				<div class="block">
+					<div>Donate bonus</div>
+					For every donation purchase made by your referral, you will get 10% of their purchase
+				</div>
+				<div class="block">
+					<div>Donate bonus</div>
+					For every donation purchase made by your referral, you will get 10% of their purchase
+				</div>
+				<div class="block">
+					<div>Donate bonus</div>
+					For every donation purchase made by your referral, you will get 10% of their purchase
+				</div>
+				<div class="block">
+					<div>Donate bonus</div>
+					For every donation purchase made by your referral, you will get 10% of their purchase
+				</div>
+				<div class="block">
+					<div>Donate bonus</div>
+					For every donation purchase made by your referral, you will get 10% of their purchase
+				</div>
+			</div>
+			<div class="master-btn-big text-btn">Invite friend</div>
+		</div>
+	</div>
+	<div class="overflow"></div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="https://www.jqueryscript.net/demo/Custom-Overlay-Scrollbar-jQuery/js/jquery.overlayScrollbars.js"></script>
+	<script src="js/script.js"></script>
+<script>
 
-let main_page = document.querySelector('#main_page');
-$(window).resize(function() {
-    $('.page.full-page').css({minHeight:$(window).height() - 161})
-});
-
-$(window).trigger('resize');
-
-if  (main_page){
-    window.Telegram.WebApp.expand() //expand window after page loading
-	window.Telegram.WebApp.disableVerticalSwipes()
-	var BackButton = window.Telegram.WebApp.BackButton;
-}
-
-
-$('body').overlayScrollbars({className       : "os-theme-dark"}); 
- 
-
-
-
-
-var isOutOfViewport = function (elem) {
-  // Get element's bounding
-  var bounding = elem.getBoundingClientRect()
-
-  // Check if it's out of the viewport on each side
-  var out = {}
-  out.top = bounding.top < 0
-  out.left = bounding.left < 0
-  out.bottom =
-    bounding.bottom >
-    (window.innerHeight-50 || document.documentElement.clientHeight)
-  out.right =
-    bounding.right > (window.innerWidth || document.documentElement.clientWidth)
-  out.any = out.top || out.left || out.bottom || out.right
-
-  return out
-}
-
- 
-var elem = document.querySelector(".main-tab-content.active")
-
-var logViewport = function () {
-  var isOut = isOutOfViewport(elem)
-  if (isOut.any) {
-    console.log("Not in the viewport! =(")
-	$('body').removeClass('scroll');
-  } else {
-    console.log("In the viewport! =)")
-	$('body').addClass('scroll');
-  }
-}
-
-logViewport()
-window.addEventListener("scroll", logViewport, false)
-$(window).resize(function() {
-logViewport()
-});
-window.addEventListener("orientationchange", function() {
-  // Announce the new orientation number
-  logViewport()
-}, false);
-
-
-
-
-
-
-
-
-
-
-
-      /*function ensureDocumentIsScrollable() {
-        const isScrollable =
-          document.documentElement.scrollHeight > window.innerHeight;
-        if (!isScrollable) {
-          document.documentElement.style.setProperty(
-            "height",
-            "calc(100vh + 1px)",
-            "important"
-          );
-        }
-      }
-      function preventCollapse() {
-        if (window.scrollY === 0) {
-          window.scrollTo(0, 1);
-        }
-      }
-
-      const scrollableElement = document.querySelector(".scrollable-element");
-      scrollableElement.addEventListener("touchstart", preventCollapse);
-
-      window.addEventListener("load", ensureDocumentIsScrollable);*/
-	$(".close").click(function() {
-		$(this).parent('.closing-div').toggleClass('hide');
-		$('.overflow').removeClass('show');
-		$('body').removeClass('hide');
-		BackButton.hide();
-	});
-	$(".overflow").click(function() {
-		$('.overflow').removeClass('show');
-		$('body').removeClass('hide');
-		$('.bottom-hidden-block.level-block').removeClass('hide');
-		BackButton.hide();
-	});
-	$(".open-level").click(function() {
-		$('body').toggleClass('hide');
-		$('.overflow').toggleClass('show');
-		$('.bottom-hidden-block.level-block').toggleClass('hide');
-		BackButton.show();
-	});
-	BackButton.onClick(function() {
-		BackButton.hide();
-		$('body').toggleClass('hide');
-		$('.overflow').toggleClass('show');
-		$('.bottom-hidden-block.level-block').toggleClass('hide');
-	});
-
-
-
-
-$('.main-tab-link').click( function() {
-	var tabID = $(this).attr('data-tab');
-	$(this).addClass('active').siblings().removeClass('active');
-	$('.main-tab-content#tab-'+tabID).addClass('active').siblings().removeClass('active');
-	logViewport();
-	$(window).scrollTop(0);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-const slider = document.querySelector(".items-list");
-let isDown = false;
-let startX;
-let scrollLeft;
-
-slider.addEventListener("mousedown", e => {
-  isDown = true;
-  slider.classList.add("active");
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener("mouseleave", () => {
-  isDown = false;
-  slider.classList.remove("active");
-});
-
-slider.addEventListener("mouseup", () => {
-  isDown = false;
-  slider.classList.remove("active");
-});
-
-slider.addEventListener("mousemove", e => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 3;
-  slider.scrollLeft = scrollLeft - walk;
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$(function () {
-	jQuery.fn.extend({
-    	countdown: function () {
-            let hour = 3, min = 0, sec = 0
-            render(hour, min, sec)
-            
-            const timer = setInterval(() => {
-            	if (hour == 0 && min == 0 && sec == 0) {
-                	clearInterval(timer)
-                    return ;
-                }
-                
-            	sec = dealSec(sec)
-                min = dealMin(min, sec)
-                hour = dealhour(hour, min, sec)
-                render(hour, min, sec)
-            }, 1000)
-        },
-    })
-    
-    $('#countdown').countdown()
-})
-
-function dealSec (sec) {
-    const timeRange = [...Array(60).keys()].reverse()
-	const idxNow = timeRange.indexOf(sec)
-    const idxNext = (idxNow + 1) % timeRange.length
-    return timeRange[idxNext]
-}
-
-function dealMin(min, sec) {
-    const timeRange = [...Array(60).keys()].reverse()
-    if (sec === 59) {
-    	const idxNow = timeRange.indexOf(min)
-        const idxNext = (idxNow + 1) % timeRange.length
-        return timeRange[idxNext]
-    }
-    return min
-}
-
-function dealhour (hour, min, sec) {
-	if (min === 59 && sec === 59) return hour - 1
-    return hour
-}
-
-function render(hour, min, sec) {
-	hour = ("00" + hour).slice(-2)
-    min  = ("00" + min).slice(-2)
-    sec  = ("00" + sec).slice(-2)
-    
-    $('#countdown').text(`${hour} : ${min} : ${sec}`)
-}
 </script>
 </body>
 </html>
