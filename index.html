@@ -217,28 +217,12 @@ var isOutOfViewport = function (elem) {
   return out
 }
 
-var elem = document.querySelector(".page")
-
-var logViewport = function () {
-  var isOut = isOutOfViewport(elem)
-  if (isOut.any) {
-    console.log("Not in the viewport! =(")
-	$('body').removeClass('scroll');
-  } else {
-    console.log("In the viewport! =)")
-	$('body').addClass('scroll');
-  }
-}
-
-logViewport()
-window.addEventListener("scroll", logViewport, false)
+ 
 $(window).resize(function() {
-logViewport()
-});
+ });
 window.addEventListener("orientationchange", function() {
   // Announce the new orientation number
-  logViewport()
-}, false);
+ }, false);
 
 
 
