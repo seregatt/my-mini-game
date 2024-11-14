@@ -450,7 +450,7 @@ THEMES:
 .os-theme-light > .os-scrollbar {
     padding: 2px;
     box-sizing: border-box;
-    background: #E2E3EE;
+    background: transparent;
 }
 .os-theme-dark > .os-scrollbar.os-scrollbar-unusable,
 .os-theme-light > .os-scrollbar.os-scrollbar-unusable {
@@ -473,7 +473,7 @@ THEMES:
     border-radius: 2px;
 }
 .os-theme-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
-    background: #FFFFFF;
+    background: transparent;
 }
 .os-theme-light > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
     background: #fff;

@@ -48,16 +48,26 @@ var logViewport = function () {
 	}
 }
 
+var initHeight = function () {
+    var $header = $('.main-tab-content.active .tab-page');
+    $.each($('.active .page'), function (index, node) {
+        var $hero = $(node);
+        $hero.css('min-height', 'calc(100vh - ' + $header.height() + 'px - 69px)');
+    });
+}
+
 logViewport()
 
 window.addEventListener("scroll", logViewport, false)
 
 $(window).resize(function() {
 	logViewport()
+	initHeight()
 });
 
 window.addEventListener("orientationchange", function() {
   logViewport()
+  initHeight()
 }, false);
 
 
@@ -66,7 +76,20 @@ window.addEventListener("orientationchange", function() {
 
 
 
-
+function debounce( func, wait, immediate ) {
+	var timeout;
+	return function () {
+		var context = this, args = arguments;
+		var later = function () {
+			timeout = null;
+			if ( !immediate ) func.apply( context, args );
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout( timeout );
+		timeout = setTimeout( later, wait );
+		if ( callNow ) func.apply( context, args );
+	};
+};
 
 
 
@@ -136,12 +159,14 @@ $('.main-tab-link').click( function() {
 	$(this).addClass('active').siblings().removeClass('active');
 	$('.main-tab-content#tab-'+tabID).addClass('active').siblings().removeClass('active');
 	logViewport();
+	initHeight();
 	$(window).scrollTop(0);
 });
 $('.small_tab_1_link').click( function() {
 	var tabID = $(this).attr('data-tab');
 	$(this).addClass('active').siblings().removeClass('active');
 	logViewport();
+	initHeight();
 	$(".small_tab_1_content").removeClass("active").fadeOut(200);
 	setTimeout(load, 200);
 	function load(){
@@ -153,6 +178,7 @@ $('.small_tab_2_link').click( function() {
 	var tabID = $(this).attr('data-tab');
 	$(this).addClass('active').siblings().removeClass('active');
 	logViewport();
+	initHeight();
 	$(".small_tab_2_content").removeClass("active").fadeOut(200);
 	setTimeout(load, 200);
 	function load(){

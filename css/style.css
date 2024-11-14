@@ -851,8 +851,12 @@ body.hide {
 ::-webkit-scrollbar-thumb:hover{
 	background-color: transparent;
 }
- 
-
+.scrollable-element .os-scrollbar {
+    background: #E2E3EE!important;
+}
+.scrollable-element .os-scrollbar-handle {
+    background: #FFFFFF!important;
+}
 
 
 
