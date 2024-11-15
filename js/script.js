@@ -16,6 +16,7 @@ if  (main_page){
 $('body').overlayScrollbars({className: "os-theme-dark"}); 
 $('.level-list-block.scrollable-element').overlayScrollbars({className: "os-theme-dark"}); 
 $('.works-info.scrollable-element').overlayScrollbars({className: "os-theme-dark"}); 
+$('.language.scrollable-element').overlayScrollbars({className: "os-theme-dark"}); 
 
 
 // Check if it's out of the viewport on each side
@@ -132,6 +133,8 @@ function debounce( func, wait, immediate ) {
 		$('.bottom-hidden-block.level-block').removeClass('hide');
 		$('.bottom-hidden-block.share-block').removeClass('hide');
 		$('.bottom-hidden-block.works-block').removeClass('hide');
+		$('.bottom-hidden-block.language-block').removeClass('hide');
+		$('.bottom-hidden-block.deleting-acount').removeClass('hide');
 		BackButton.hide();
 	});
 	$(".open-level").click(function() {
@@ -158,7 +161,22 @@ function debounce( func, wait, immediate ) {
 		$('.bottom-hidden-block.works-block').toggleClass('hide');
 		BackButton.show();
 	});
-
+	$(".open-language").click(function() {
+		$('body').toggleClass('hide');
+		$('.overflow').toggleClass('show');
+		$('.bottom-hidden-block.language-block').toggleClass('hide');
+		BackButton.show();
+	});
+	$(".open-delete").click(function() {
+		$('body').toggleClass('hide');
+		$('.overflow').toggleClass('show');
+		$('.bottom-hidden-block.deleting-acount').toggleClass('hide');
+		BackButton.show();
+	});
+	$(".test-token").click(function() {
+		$(this).hide();
+		$('.balance-block').show();
+	});
 //tabs
 $('.main-tab-link').click( function() {
 	var tabID = $(this).attr('data-tab');
