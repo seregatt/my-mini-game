@@ -44,7 +44,7 @@ body {
 	background:var(--tg-theme-bg-color);
 	padding:2px 4px;
 	font-size:10px;
-	color:#9393BA;
+	color:var(--tg-theme-subtitle-text-color);
 	border-radius:7px;
 	font-weight:600;
 	display:inline-block;
