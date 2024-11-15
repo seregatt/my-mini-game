@@ -147,7 +147,11 @@ function debounce( func, wait, immediate ) {
 		BackButton.hide();
 		$('body').toggleClass('hide');
 		$('.overflow').toggleClass('show');
-		$('.bottom-hidden-block.level-block').toggleClass('hide');
+		$('.bottom-hidden-block.level-block').removeClass('hide');
+		$('.bottom-hidden-block.share-block').removeClass('hide');
+		$('.bottom-hidden-block.works-block').removeClass('hide');
+		$('.bottom-hidden-block.language-block').removeClass('hide');
+		$('.bottom-hidden-block.deleting-acount').removeClass('hide');
 	});
 	$(".open-share").click(function() {
 		$('body').toggleClass('hide');
