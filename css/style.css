@@ -4,7 +4,7 @@ body {
 	font-family: "Inter", sans-serif;
 	padding:0;
 	margin:0;
-	background:var(--tg-theme-secondary-bg-color);
+	background:var(--tg-theme-header-bg-color);
 	font-size:14px;
 	color:#9393BA;
 	font-weight:500;
@@ -29,7 +29,7 @@ body {
 	width:32px;
 	height:32px;
 	overflow:hidden;
-	background:#D9D9D9;
+	background:var(--tg-theme-section-header-text-color);
 	border-radius:32px;
 	margin:0 8px 0 0;
 }
@@ -38,10 +38,10 @@ body {
 }
 .main-head .user .user-info   {
 	font-size:12px;
-	color:#170947;
+	color:var(--tg-theme-text-color);
 }
 .main-head .user .user-info span {
-	background:#E2E3EE;
+	background:var(--tg-theme-bg-color);
 	padding:2px 4px;
 	font-size:10px;
 	color:#9393BA;
@@ -51,10 +51,10 @@ body {
 	margin:2px 0 0 0;
 }
 .main-head .user-rank {
-	background:#F2F3F8;
+	background:var(--tg-theme-bg-color);
 	border-radius:8px;
 	font-weight:600;
-	color:#9393BA;
+	color:var(--tg-theme-text-color);
 	font-size:10px;
 	padding:4px 8px;
 }
