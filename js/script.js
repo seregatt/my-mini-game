@@ -207,7 +207,7 @@ $('.small_tab_2_link').click( function() {
 	$(this).addClass('active').siblings().removeClass('active');
 	logViewport();
 	initHeight();
-	$(".small_tab_2_content").removeClass("active").fadeOut(200);
+	$(".small_tab_2_content").removeClass("active");
 	setTimeout(load, 200);
 	function load(){
 	   $('.small_tab_2_content#tab-'+tabID).fadeIn(500).addClass("active");
