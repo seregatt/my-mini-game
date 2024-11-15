@@ -87,7 +87,7 @@ body {
 	padding:0 8px;
 }
 .bottom-fixed-menu .menu.active {
-	color:#FEB24A;
+	color:var(--tg-theme-button-color);
 }
 .bottom-fixed-menu .menu .icon {
 	width:20px;
@@ -101,8 +101,9 @@ body {
 	fill:var(--tg-theme-text-color);
 }
 .bottom-fixed-menu .menu.active .icon-color {
-	fill:#FEB24A;
-}body.scroll {
+	fill:var(--tg-theme-button-color);
+}
+body.scroll {
     touch-action: none !important;
 }
 .page {
