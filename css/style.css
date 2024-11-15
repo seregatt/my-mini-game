@@ -61,7 +61,7 @@ body {
 .main-head .user-rank span {
 	display:block;
 	font-size:12px;
-	color:#170947;
+	color:var(--tg-theme-subtitle-text-color);
 	font-weight:500;
 	margin:2px 0 0 0;
 }
