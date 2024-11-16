@@ -607,7 +607,7 @@ body.hide {
  
 }
 .tab-page  {
-	background:#fff;
+	background:var(--tg-theme-header-bg-color);
 	padding:10px 20px 0 20px;
 }
 .tab-page .title  {
