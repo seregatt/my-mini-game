@@ -111,8 +111,25 @@ body.scroll {
 	margin: 0 0 40px;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
-	background: var(--tg-theme-secondary-bg-color) repeat url("../image/background.png") left top;
+	background: var(--tg-theme-secondary-bg-color);
 	box-sizing:border-box;
+		position:relative
+}
+.page:after {
+	position:absolute;
+	content:'';
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:var(--tg-theme-button-color);
+	-webkit-mask: repeat url(../image/background.png) left top;
+	mask: repeat url(../image/background.png) left top;
+	z-index:0;
+}
+.page > div {
+	position:relative;
+	z-index:1;
 }
 .page.full-page {
 	display: flex;
