@@ -219,12 +219,12 @@ body.scroll {
 	top:0;
 }
 .master-btn-big {
-	background:var(--tg-theme-button-color);
+	background:#fcd535;
+	color:#202630;
 	border-radius:30px;
 	text-align:center;
 	font-size:16px;
 	font-weight:500;
-	color:var(--tg-theme-button-text-color);
 	display:flex;
 	justify-content: center;
 	padding:14px 0;
@@ -745,13 +745,13 @@ body.hide {
 .master-btn {
 	height:32px;
 	padding: 7px 16px;
-	background-color:var(--tg-theme-button-color);
+	background:#fcd535;
+	color:#202630;
 	background-repeat:no-repeat;
 	background-position:center center;
 	border-radius:10px;
 	box-sizing: border-box;
 	font-size:14px;
-	color:#170947;
 	font-weight:500;
 }
 .master-btn.add-btn {
