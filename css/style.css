@@ -87,7 +87,7 @@ body {
 	padding:0 8px;
 }
 .bottom-fixed-menu .menu.active {
-	color:var(--tg-theme-button-color);
+	color:var(--tg-theme-hint-color);
 }
 .bottom-fixed-menu .menu .icon {
 	width:20px;
@@ -101,7 +101,7 @@ body {
 	fill:var(--tg-theme-text-color);
 }
 .bottom-fixed-menu .menu.active .icon-color {
-	fill:var(--tg-theme-button-color);
+	fill:var(--tg-theme-hint-color);
 }
 body.scroll {
     touch-action: none !important;
@@ -219,7 +219,7 @@ body.scroll {
 	top:0;
 }
 .master-btn-big {
-	background:#fcd535;
+	background:#FEB24A;
 	color:#202630;
 	border-radius:30px;
 	text-align:center;
