@@ -461,3 +461,4 @@ $('.master-btn-big.copy-icon').click( function() {
 		return false;
 	}
 });
+document.addEventListener("touchstart", function() {},false);
