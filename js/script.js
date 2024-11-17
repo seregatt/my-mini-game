@@ -56,11 +56,15 @@ var initHeight = function () {
 }
 
 var mainHeight = function () {
-    var $header = $('.main-tab-content.active .main-head');
+    var $header = $('.main-tab-content.active .main-head').outerHeight();
+	var $footer = $('.bottom-fixed-menu').outerHeight();
     $.each($('.active .page'), function (index, node) {
         var $hero = $(node);
-        $hero.css('min-height', 'calc(100vh - ' + $header.height() + 'px - 90px)');
+        $hero.css({
+			height: $(window).height() - $header - $footer - 9 +'px'
+		});
     });
+	console.log($(window).height(),  $header,   $footer)
 }
 
 logViewport()
