@@ -309,8 +309,8 @@ $('.mini_tab_2_link').click( function() {
 	$.fn.countTo.defaults = {
 		from: 0,               // the number the element should start at
 		to: 0,                 // the number the element should end at
-		speed: 500000,           // how long it should take to count between the target numbers
-		refreshInterval: 100,  // how often the element should be updated
+		speed: 5000,           // how long it should take to count between the target numbers
+		refreshInterval: 10,  // how often the element should be updated
 		decimals: 2,           // the number of decimal places to show
 		formatter: formatter,  // handler for formatting the value before rendering
 		onUpdate: null,        // callback method for every time the element is updated
@@ -322,23 +322,7 @@ $('.mini_tab_2_link').click( function() {
 	}
 }(jQuery));
 
-jQuery(function ($) {
-  // custom formatting example
-  $('.count-number').data('countToOptions', {
-	formatter: function (value, options) {
-	  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-	}
-  });
-  
-  // start all the timers
-  $('.count-farm').each(count);  
-  
-  function count(options) {
-	var $this = $(this);
-	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-	$this.countTo(options);
-  }
-});
+
 
 
 
@@ -404,7 +388,7 @@ slider.addEventListener("mousemove", e => {
 $(function () {
 	jQuery.fn.extend({
     	countdown: function () {
-            let hour = 3, min = 0, sec = 0
+            let hour = 0, min = 0, sec = 5
             render(hour, min, sec)
             
             const timer = setInterval(() => {
@@ -421,7 +405,7 @@ $(function () {
         },
     })
     
-    $('#countdown').countdown()
+   
 })
 
 function dealSec (sec) {
@@ -453,3 +437,36 @@ function render(hour, min, sec) {
     
     $('#countdown').text(`${hour} : ${min} : ${sec}`)
 }
+
+$('.btn-start-mining').click( function() {
+	$(this).fadeOut(300);
+	
+	setTimeout(load, 300);
+	function load(){
+		$('.btn-active-mining').addClass("action").css("display", "flex").fadeIn(300);
+		$('#countdown').countdown();
+
+		$('.count-number').data('countToOptions', {
+			formatter: function (value, options) {
+				return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+			}
+		});
+
+		// start all the timers
+		$('.count-farm').each(count);  
+
+		function count(options) {
+			var $this = $(this);
+			options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+			$this.countTo(options);
+		}
+		return false;
+	}
+	
+	setTimeout(finish, 5000);
+	function finish(){
+		$('.btn-active-mining').removeClass("action").fadeOut(300);
+		$('.btn-end-mining').addClass("action").css("display", "flex").fadeIn(300);
+		return false;
+	}
+});

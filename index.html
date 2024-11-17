@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="css/OverlayScrollbars.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Game</title>
 </head>
 <body>
@@ -39,9 +38,12 @@
 						100 nuts farming per hour
 						<div class="boost open-level">BOOST</div>
 					</div>
-					<!--<div class="master-btn-big mining-btn">Start mining</div>-->
-					<!--<div class="master-btn-big claim-btn">Claim tokens<div class="count">124</div></div>-->
-					<div class="master-btn-big claim-btn"><div class="countdown">Left <div id="countdown"></div></div><div class="count count-farm" data-to="100">4658</div></div>
+					<div class="mining-buttons-block">
+						<div class="master-btn-big mining-btn btn-start-mining">Start mining</div>
+						<div class="master-btn-big claim-btn btn-active-mining"><div class="countdown">Left <div id="countdown"></div></div><div class="count count-farm" data-to="100">0</div></div>
+						<div class="master-btn-big claim-btn btn-end-mining">Claim tokens<div class="count">100</div></div>
+					</div>
+					
 				</div>
 			</div>
 		</div>
