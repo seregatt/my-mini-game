@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+* {outline:0}
 body {
 	font-family: "Inter", sans-serif;
 	padding:0;
@@ -870,6 +870,8 @@ body.hide {
 	box-sizing: border-box;
 	font-size:14px;
 	font-weight:500;
+	position: relative;
+	z-index: 1;
 }
 .master-btn.add-btn {
 	background-image: url(../image/plus-icon.svg);
@@ -902,6 +904,9 @@ body.hide {
 }
 .master-btn.text-btn {
 
+}
+.master-btn:active, .master-btn:target {
+	filter: brightness(0.9);
 }
 .small-tab-menu {
 	display:flex;
