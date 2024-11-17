@@ -235,7 +235,7 @@ body.scroll {
 	overflow:hidden;
 }
 .master-btn-big:active, .master-btn-big:target {
-	background:red
+	filter: brightness(0.9);
 }
 .master-btn-big.btn-active-mining {
     animation-duration: 1.8s;
