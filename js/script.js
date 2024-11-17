@@ -27,7 +27,7 @@ var isOutOfViewport = function (elem) {
 	out.left = bounding.left < 0
 	out.bottom =
 	bounding.bottom >
-	(window.innerHeight-50 || document.documentElement.clientHeight)
+	(window.innerHeight || document.documentElement.clientHeight)
 	out.right =
 	bounding.right > (window.innerWidth || document.documentElement.clientWidth)
 	out.any = out.top || out.left || out.bottom || out.right
@@ -48,23 +48,27 @@ var logViewport = function () {
 }
 
 var initHeight = function () {
-    var $header = $('.main-tab-content.active .tab-page');
+    var $header = $('.main-tab-content.active .tab-page').outerHeight();
+	var $footer = $('.bottom-fixed-menu').outerHeight();
     $.each($('.active .page'), function (index, node) {
         var $hero = $(node);
-        $hero.css('min-height', 'calc(100vh - ' + $header.height() + 'px - 69px)');
+        $hero.css({
+			minHeight: $(window).height() - $header - $footer+'px'
+		});
     });
+	console.log($(window).height(),  $header,   $footer, $(window).height())
 }
 
 var mainHeight = function () {
     var $header = $('.main-tab-content.active .main-head').outerHeight();
 	var $footer = $('.bottom-fixed-menu').outerHeight();
-    $.each($('.active .page'), function (index, node) {
+    $.each($('.main-tab-content.active .page'), function (index, node) {
         var $hero = $(node);
         $hero.css({
 			height: $(window).height() - $header - $footer+'px'
 		});
     });
-	console.log($(window).height(),  $header,   $footer, $(window).height())
+	
 }
 
 logViewport()
@@ -103,28 +107,6 @@ function debounce( func, wait, immediate ) {
 };
 
 
-
-      /*function ensureDocumentIsScrollable() {
-        const isScrollable =
-          document.documentElement.scrollHeight > window.innerHeight;
-        if (!isScrollable) {
-          document.documentElement.style.setProperty(
-            "height",
-            "calc(100vh + 1px)",
-            "important"
-          );
-        }
-      }
-      function preventCollapse() {
-        if (window.scrollY === 0) {
-          window.scrollTo(0, 1);
-        }
-      }
-
-      const scrollableElement = document.querySelector(".scrollable-element");
-      scrollableElement.addEventListener("touchstart", preventCollapse);
-
-      window.addEventListener("load", ensureDocumentIsScrollable);*/
 	$(".close").click(function() {
 		$(this).parent('.closing-div').toggleClass('hide');
 		$('.overflow').removeClass('show');
@@ -217,7 +199,6 @@ $('.small_tab_2_link').click( function() {
 	   $('.small_tab_2_content#tab-'+tabID).fadeIn(500).addClass("active").siblings().removeClass('active');
 		return false;
 	}
-	console.log("1")
 });
 $('.mini_tab_1_link').click( function() {
 	var tabID = $(this).attr('data-tab');
@@ -467,6 +448,16 @@ $('.btn-start-mining').click( function() {
 	function finish(){
 		$('.btn-active-mining').removeClass("action").fadeOut(300);
 		$('.btn-end-mining').addClass("action").css("display", "flex").fadeIn(300);
+		return false;
+	}
+	
+});
+
+$('.master-btn-big, .master-btn').click( function() {
+	$('.fixed-info').removeClass('close-info').addClass("open-info").fadeIn(300);
+	setTimeout(close_info, 1000);
+	function close_info(){
+		$('.fixed-info').removeClass("open-info").addClass("close-info").fadeOut(300);
 		return false;
 	}
 });
