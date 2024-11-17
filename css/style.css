@@ -234,7 +234,7 @@ body.scroll {
 	position:relative;
 	overflow:hidden;
 }
-.master-btn-big:active {
+.master-btn-big:active, .master-btn-big:target {
 	filter: brightness(0.9);
 }
 .master-btn-big.btn-active-mining {
@@ -875,7 +875,21 @@ body.hide {
 	background-image: url(../image/plus-icon.svg);
 }
 .master-btn.reload-btn {
-	background-image: url(../image/reload-icon.svg);
+	position:relative;
+}
+.master-btn.reload-btn:after {
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	content:'';
+	display:block;
+	background: no-repeat url(../image/reload-icon.svg) center center;
+	animation: spinner 1.5s linear infinite;
+}
+@keyframes spinner {
+	to { transform: rotate(-360deg); }
 }
 .master-btn.accept-btn {
 	background-image: url(../image/accept-icon.svg);
