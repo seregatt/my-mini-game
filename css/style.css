@@ -72,7 +72,7 @@ body {
 	max-width:1000px;
 	width:100%;
 	background:var(--tg-theme-header-bg-color);
-	padding:8px 20px 8px 20px;
+	padding:8px 20px 24px 20px;
 	box-sizing: border-box;
 	display:flex;
 	justify-content: space-between;
@@ -142,13 +142,13 @@ body.scroll {
 	width:100%;
 }
 .page .invite {
-	background: var(--tg-theme-hint-color);
-	background: linear-gradient(299deg, rgba(254,178,74,0.4430147058823529) 0%, var(--tg-theme-hint-color)) 25%);
+	background: rgb(254,178,74);
+	background: linear-gradient(299deg, rgba(254,178,74,0.4430147058823529) 0%, rgba(255,255,255,1) 25%);
 	padding:16px;
 	border-radius:16px;
 	font-size:16px;
 	line-height:20px;
-	color:var(--tg-theme-text-color);
+	color:#170947;
 	font-weight:500;
 	position:relative;
 }
@@ -169,8 +169,9 @@ body.scroll {
 	font-weight:600;
 	margin:8px 0 0 0;
 }
-.page .bottom-block {
-	
+.page .bottom-block.top {
+	position:absolute;
+	top:170px;
 }
 .page .bottom-block .item-coin {
 	font-size:32px;
