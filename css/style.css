@@ -72,7 +72,7 @@ body {
 	max-width:1000px;
 	width:100%;
 	background:var(--tg-theme-header-bg-color);
-	padding:5px 20px 12px 20px;
+	padding:8px 20px 8px 20px;
 	box-sizing: border-box;
 	display:flex;
 	justify-content: space-between;
@@ -92,7 +92,7 @@ body {
 .bottom-fixed-menu .menu .icon {
 	width:20px;
 	height:20px;
-	margin:0 auto 2px auto;
+	margin:0 auto 3px auto;
 	display:flex;
     justify-content: center;
     align-items: center;
@@ -218,7 +218,7 @@ body.scroll {
 	top:0;
 }
 .master-btn-big {
-	background:#FEB24A;
+	background:#d9983e;
 	color:#202630;
 	border-radius:30px;
 	text-align:center;
