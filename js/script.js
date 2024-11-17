@@ -61,7 +61,7 @@ var mainHeight = function () {
     $.each($('.active .page'), function (index, node) {
         var $hero = $(node);
         $hero.css({
-			height: $(window).height() - $header - $footer - 9 +'px'
+			height: $(window).height() - $header - $footer+'px'
 		});
     });
 	console.log($(window).height(),  $header,   $footer)
