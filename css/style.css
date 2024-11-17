@@ -1019,7 +1019,7 @@ body.hide {
 .master-block.no-space .block:after {
 	content:'';
 	left:52px;
-	right:0;
+	right:16px;
 	position:absolute;
 	bottom:-1px;
 	z-index:1;

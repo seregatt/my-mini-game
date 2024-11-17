@@ -453,7 +453,7 @@ $('.btn-start-mining').click( function() {
 	
 });
 
-$('.master-btn-big, .master-btn').click( function() {
+$('.master-btn-big.text-btn').click( function() {
 	$('.fixed-info').removeClass('close-info').addClass("open-info").fadeIn(300);
 	setTimeout(close_info, 1000);
 	function close_info(){
