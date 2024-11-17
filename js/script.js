@@ -64,7 +64,7 @@ var mainHeight = function () {
 			height: $(window).height() - $header - $footer+'px'
 		});
     });
-	console.log($(window).height(),  $header,   $footer)
+	console.log($(window).height(),  $header,   $footer, $(window).height())
 }
 
 logViewport()

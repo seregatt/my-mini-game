@@ -135,7 +135,6 @@ body.scroll {
 .page.full-page {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 0 62px;
 	align-content: space-between;
 }
 .page.full-page > div {
@@ -243,7 +242,7 @@ body.scroll {
 	width:20px;
 	height:20px;
 	margin:0 6px 0 0;
-    background-color: var(--tg-theme-button-text-color);
+    background-color: #202630;
     -webkit-mask:  no-repeat url("../image/mining-icon.svg") center center;
     mask: no-repeat url("../image/mining-icon.svg") center center;
 }
@@ -257,14 +256,14 @@ body.scroll {
 	background:var(--tg-theme-button-text-color);
 	border-radius:30px;
 	padding:8px 12px;
-	color:var(--tg-theme-button-color);
+	color:#202630;
 }
 .master-btn-big.claim-btn .count:before {
 	content:'';
 	width:15px;
 	height:15px;
 	display:inline-block;
-    background-color: var(--tg-theme-button-color);
+    background-color: #202630;
     -webkit-mask:  no-repeat url("../image/claim-icon.svg") center center;
     mask: no-repeat url("../image/claim-icon.svg") center center;
 	margin:0 5px -2px 0;
@@ -386,7 +385,7 @@ body.scroll {
 	width:20px;
 	height:20px;
 	display:inline-block;
-    background-color: var(--tg-theme-button-text-color);
+    background-color: #202630;
     -webkit-mask:  no-repeat url("../image/time-icon.svg") center center;
     mask: no-repeat url("../image/time-icon.svg") center center;
 	margin:0 6px 0 0;
@@ -620,7 +619,7 @@ body.hide {
 	overflow:auto;
 }
 .closing-div.slide-down.hide {
- 
+	
 }
 @keyframes slideUp {
 	0% {
@@ -745,7 +744,7 @@ body.hide {
 .master-btn {
 	height:32px;
 	padding: 7px 16px;
-	background:#fcd535;
+	background:#FEB24A;
 	color:#202630;
 	background-repeat:no-repeat;
 	background-position:center center;
@@ -765,8 +764,9 @@ body.hide {
 	background-color:#E2E3EE;
 }
 .master-btn.arrow-btn {
-	background-image: url(../image/arrow-icon.svg);
-	background-color:transparent;
+	background-color: var(--tg-theme-button-color);
+    -webkit-mask: no-repeat url(../image/arrow-icon.svg) center center;
+    mask: no-repeat url(../image/arrow-icon.svg) center center;
 }
 .master-btn.text-btn {
 
